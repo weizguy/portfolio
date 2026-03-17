@@ -1,0 +1,45 @@
+@import "tailwindcss";
+@source "..";
+
+:root {
+  --background: #0d1f2d;
+  --foreground: #e8ddd6;
+  /* Mirror theme colors so utilities (e.g. text-cream, bg-accent) resolve reliably */
+  --color-background: #0d1f2d;
+  --color-surface: #132a3a;
+  --color-surfaceHighlight: #1a3548;
+  --color-accent: #D2C1B6;
+  --color-accentHover: #e0d0c5;
+  --color-cream: #FFFFFF;
+  --color-muted: #5a7d96;
+  --color-bodyText: #e8ddd6;
+  --color-border: #1e3a4f;
+}
+
+@theme {
+  /* Colors – Tailwind v4 uses --color-* for utilities (bg-background, text-accent, etc.) */
+  --color-background: #0d1f2d;
+  --color-surface: #132a3a;
+  --color-surfaceHighlight: #1a3548;
+  --color-accent: #D2C1B6;
+  --color-accentHover: #e0d0c5;
+  --color-cream: #FFFFFF;
+  --color-muted: #5a7d96;
+  --color-bodyText: #e8ddd6;
+  --color-border: #1e3a4f;
+  /* Fonts are provided by layout.tsx via Next.js font variables (--font-sans, --font-mono) on body */
+
+  /* Blink animation (for terminal cursor, etc.) */
+  --animate-blink: blink 1s step-end infinite;
+
+  @keyframes blink {
+    0%, 100% { opacity: 1; }
+    50% { opacity: 0; }
+  }
+}
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+  font-family: var(--font-sans), sans-serif;
+}
